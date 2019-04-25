@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/elixir:1.7
+    steps:
+      - checkout
+      - run: mix local.hex --force
+      - run: mix test

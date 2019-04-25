@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Schultzer/unidekode.svg?style=svg)](https://circleci.com/gh/Schultzer/unidekode)
+
 # Unidekode
 
 Blazing fast and zero dependencies decoding of unicode strings to US-ASCII strings

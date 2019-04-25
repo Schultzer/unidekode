@@ -43,7 +43,7 @@ defmodule Unidekode do
               [{String.to_integer(capital_match, 16), letter}, {String.to_integer(small_match, 16), String.downcase(letter)}]
             _ -> []
             end)
-           |> Enum.into(for x <- '!"#%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~\s\t\n', do: {x, <<x>>})
+           |> Stream.concat(for x <- '!"#%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~\s\t\n', do: {x, <<x>>})
            |> Enum.uniq()
 
   @doc !"""
